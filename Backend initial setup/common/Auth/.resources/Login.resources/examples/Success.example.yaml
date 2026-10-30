@@ -1,0 +1,79 @@
+$kind: http-example
+request:
+  url: "{{url}}/api/v1/auth/login"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \    \"email\": \"shadathossan3500@gmail.com\",\r
+
+      \    \"password\": \"1qazxsw2\",\r
+
+      \    \"fcmToken\": \"The firebase FCM token\" // // onlly uee for push notification / mobile focus *\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Security-Policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    Cross-Origin-Opener-Policy: same-origin
+    Cross-Origin-Resource-Policy: same-origin
+    Origin-Agent-Cluster: ?1
+    Referrer-Policy: no-referrer
+    Strict-Transport-Security: max-age=15552000; includeSubDomains
+    X-Content-Type-Options: nosniff
+    X-DNS-Prefetch-Control: off
+    X-Download-Options: noopen
+    X-Frame-Options: SAMEORIGIN
+    X-Permitted-Cross-Domain-Policies: none
+    X-XSS-Protection: "0"
+    Access-Control-Allow-Origin: "*"
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "1014"
+    ETag: W/"3f6-H96aeXQd4i7LPbkvF5oVxkzloXM"
+    Vary: Accept-Encoding
+    Date: Sun, 16 Feb 2025 04:25:18 GMT
+    Connection: keep-alive
+    Keep-Alive: timeout=5
+  body:
+    type: json
+    content: |-
+      {
+          "code": 200,
+          "message": "Login Successful",
+          "data": {
+              "attributes": {
+                  "user": {
+                      "firstName": "Md. Shadat",
+                      "lastName": "Hossain",
+                      "fullName": "Md. Shadat Hossain",
+                      "email": "shadathossan3500@gmail.com",
+                      "image": "/uploads/users/user.png",
+                      "role": "user",
+                      "callingCode": null,
+                      "phoneNumber": null,
+                      "nidNumber": null,
+                      "isNIDVerified": null,
+                      "dataOfBirth": null,
+                      "address": null,
+                      "oneTimeCode": null,
+                      "isProfileCompleted": false,
+                      "createdAt": "2025-02-16T04:16:58.879Z",
+                      "id": "67b166ba89ff5ba8358f3f07"
+                  },
+                  "tokens": {
+                      "access": {
+                          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2N2IxNjZiYTg5ZmY1YmE4MzU4ZjNmMDciLCJpYXQiOjE3Mzk2Nzk5MTgsImV4cCI6MTc0MzIxOTU5ODkxMiwidHlwZSI6ImFjY2VzcyJ9.P_SNm_ml5_pQq-wTKxxaoqLXwUJcEk31JlSRCv_H610",
+                          "expires": "2025-03-09T00:25:18.994Z"
+                      },
+                      "refresh": {
+                          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMTA3LTA0LTA4VDA0OjI1OjE4Ljk5NVoiLCJpYXQiOjE3Mzk2Nzk5MTgsImV4cCI6MTczOTY3OTkxOCwiYWN0aXZpdHkiOiI2N2IxNjZiYTg5ZmY1YmE4MzU4ZjNmMDcifQ.7Q9XnI_udHwjy6H3vnXNRMzOXuwD-3IC2GoD5bn4BwQ",
+                          "expires": "2107-04-08T04:25:18.995Z"
+                      }
+                  }
+              }
+          }
+      }
+order: 1000

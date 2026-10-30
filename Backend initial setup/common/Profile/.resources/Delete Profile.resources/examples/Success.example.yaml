@@ -1,0 +1,64 @@
+$kind: http-example
+request:
+  url: "{{url}}/api/v1/auth/delete-me"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \    \"password\": \"1qazxsw2\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Security-Policy: "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+    Cross-Origin-Opener-Policy: same-origin
+    Cross-Origin-Resource-Policy: same-origin
+    Origin-Agent-Cluster: ?1
+    Referrer-Policy: no-referrer
+    Strict-Transport-Security: max-age=15552000; includeSubDomains
+    X-Content-Type-Options: nosniff
+    X-DNS-Prefetch-Control: off
+    X-Download-Options: noopen
+    X-Frame-Options: SAMEORIGIN
+    X-Permitted-Cross-Domain-Policies: none
+    X-XSS-Protection: "0"
+    Access-Control-Allow-Origin: "*"
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "493"
+    ETag: W/"1ed-u7JnPShK/A6+D2ekzs6kj4NCrRk"
+    Vary: Accept-Encoding
+    Date: Sun, 16 Feb 2025 06:17:48 GMT
+    Connection: keep-alive
+    Keep-Alive: timeout=5
+  body:
+    type: json
+    content: |-
+      {
+          "code": 200,
+          "message": "Account Deleted",
+          "data": {
+              "attributes": {
+                  "user": {
+                      "firstName": "Md. Shadat",
+                      "lastName": "Hossain",
+                      "fullName": "Md. Shadat Hossain",
+                      "email": "shadathossan3500@gmail.com",
+                      "image": "/uploads/users/colleagues-1739686338668.JPG",
+                      "role": "user",
+                      "callingCode": "+880",
+                      "phoneNumber": 1757054846,
+                      "nidNumber": 4678972377,
+                      "isNIDVerified": null,
+                      "dataOfBirth": null,
+                      "address": "Dhaka, Bangladesh",
+                      "isProfileCompleted": false,
+                      "createdAt": "2025-02-16T04:16:58.879Z",
+                      "id": "67b166ba89ff5ba8358f3f07"
+                  }
+              }
+          }
+      }
+order: 1000

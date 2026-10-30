@@ -1,0 +1,36 @@
+$kind: http-request
+url: "{{url}}/api/v1/users/self/update"
+method: PATCH
+body:
+  type: formdata
+  content:
+    - type: text
+      key: firstName
+      value: Md. Shadat
+    - type: text
+      key: lastName
+      value: Hossain
+    - type: text
+      key: callingCode
+      value: "+880"
+    - type: text
+      key: phoneNumber
+      value: "1757054846"
+    - type: text
+      key: nidNumber
+      value: "4678972377"
+    - type: text
+      key: dataOfBirth
+      value: 2000-07-27
+    - type: text
+      key: address
+      value: Dhaka, Bangladesh
+    - type: file
+      key: image
+      src: /C:/Users/bdCalling/Downloads/colleagues.JPG
+auth:
+  type: bearer
+  credentials:
+    token: "{{accessToken}}"
+examples: ./.resources/Profile Update.resources/examples
+order: 2000

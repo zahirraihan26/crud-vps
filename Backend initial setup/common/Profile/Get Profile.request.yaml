@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{url}}/api/v1/users/self/in"
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{accessToken}}"
+examples: ./.resources/Get Profile.resources/examples
+order: 1000

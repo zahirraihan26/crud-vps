@@ -1,0 +1,13 @@
+# Use this workspace to collaborate
+workspace:
+  id: b1cfec86-8f21-4a4d-ae6a-5945d5f8df4e
+
+localResources:
+  collections:
+    - ../Backend initial setup
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../Backend initial setup: ff91bb07-dafb-49e1-9cdf-8685ae658fa9

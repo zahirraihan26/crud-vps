@@ -1,0 +1,48 @@
+$kind: http-request
+url: "{{url}}/api/v1/auth/login"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"email\": \"shadathossan3500@gmail.com\",\r
+
+    \    \"password\": \"1qazxsw2\",\r
+
+    \    \"fcmToken\": \"The firebase FCM token\" // // onlly uee for push notification / mobile focus *\r
+
+    }"
+scripts:
+  - type: afterResponse
+    code: "// Parse the JSON response body\r
+
+      let response = pm.response.json();\r
+
+      \r
+
+      // Check if the response code is 200 (Login Successful)\r
+
+      if (response.code === 200) {\r
+
+      \    // Extract the access token\r
+
+      \    let accessToken = response.data.attributes.tokens.access.token;\r
+
+      \    \r
+
+      \    // Set the access token in a global variable\r
+
+      \    pm.globals.set(\"accessToken\", accessToken);\r
+
+      \    \r
+
+      \    console.log(\"Access token set in global variable: userAccessToken\");\r
+
+      } else {\r
+
+      \    console.log(\"Login failed: \" + response.message);\r
+
+      }\r\n"
+    language: text/javascript
+examples: ./.resources/Login.resources/examples
+order: 3000

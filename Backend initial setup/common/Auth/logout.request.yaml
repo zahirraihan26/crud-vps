@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{url}}/api/v1/auth/logout"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMTA3LTA0LTA4VDA1OjIzOjQxLjYzNFoiLCJpYXQiOjE3Mzk2ODM0MjEsImV4cCI6MTczOTY4MzQyMSwiYWN0aXZpdHkiOiI2N2IxNjZiYTg5ZmY1YmE4MzU4ZjNmMDcifQ.TgJ4poj6MmvUCNzZwItXggZdqdJqxSyxs8V0XaYcMCY\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{accessToken}}"
+examples: ./.resources/logout.resources/examples
+order: 7000
